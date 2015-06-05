@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>服装</title>
+	<link rel="stylesheet" type="text/css" href="mystyle.css" />
+  <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+<div class ="header">
+ <div class="gnpostion">
+  <ul class="gnlist">
+    <li class="li1"><a>欢迎光临本店 </a> </li>
+    <li class="li1"><a class="a1" href="">收藏网站 </a> </li>
+     <li class="li1"><a class="a1" href="">【登录】</a> </li>
+      <li class="li1"><a class="a1" href="">【注册】 </a> </li>
+   </ul>
+   </div>
+   <ul class="hdlist">
+    <li class="li2"><img src="picture\图标1.fw.png"width="16"height="16" > </li>
+    <li class="li2"><img src="picture\关注.fw.png"width="50"height="16" > </li>
+     <li class="li2"><img src="picture\加.fw.png"width="16"height="16"style="padding-left:4px ;"></li>
+      <li class="li2"><a style="color:#5F6565;font-family:微软雅黑,Regular;font-size:13px;" >分享到:</a> </li>
+      <li class="li2"><img src="picture\图标2.fw.png"width="108"height="16" ></li>
+   </ul>
+   </div>
+   <h style="width:274px;height:143px;color:#2F2F30;left: 140px; position: absolute; top: 110px;font-family:微软雅黑,Regular;font-size:40px;">利商云平台</h>
+   
+<input class="search" type="search" id="mySearch" placeholder="搜索..">
+
+<input class="click"  type="image" src="picture\搜索.png"width="48"height="40" >
+ <img src="E:\网页\服装\picture\购物车.jpg"width="178"height="40" style="left: 1480px; position: absolute; top: 120px;" >
+
+   <div class="header1">
+   	<ul class="gnlist1">
+    <li class="menu1"><a class="a2" href="#所有商品分类">所有商品分类 </a>
+         <ul ><li class="menu2"><a class="a3" href="#">女装上衣</a></li>
+              <li class="menu2"><a class="a3" href="#">女装裙子</a></li>
+               <li class="menu2"><a class="a3" href="#">女装休闲裤</a></li>
+                      </li></ul>
+    <li class="menu1"><a class="a2" href="#首页">首页 </a> 
+      <ul ><li class="menu2"><a class="a3" href="#">女装上衣</a></li>
+              <li class="menu2"><a class="a3" href="#">女装裙子</a></li>
+               <li class="menu2"><a class="a3" href="#">女装休闲裤</a></li>
+                      </li></ul>
+     <li class="menu1"><a class="a2" href="#商品列表">商品列表</a> </li>
+      <li class="menu1"><a class="a2" href="#团购列表">团购列表 </a> </li>
+      <li class="menu1"><a class="a2" href="#资讯">资讯 </a> </li>
+      <li class="menu1"><a class="a2" href="#留言">留言 </a> </li>
+   </ul>
+</div>
+
+<script language =javascript >
+var curIndex=0;
+//时间间隔(单位毫秒)，每秒钟显示一张，数组共有5张图片放在Photos文件夹下。
+var timeInterval=4000;
+var arr=new Array();
+arr[0]="picture/主图.fw.png";
+arr[1]="picture/ym.jpg";
+arr[2]="picture/g2ohy.jpg";
+arr[3]="picture/nw.jpg";
+var timer=null;
+ function startime(){
+  timer= setInterval(changeImg,timeInterval);
+}
+function changeImg()
+{
+    var obj=document.getElementById("obj");
+    if (curIndex==arr.length-1) 
+    {
+        curIndex=0;
+    }
+    else
+    {
+        curIndex+=1;
+    }
+    obj.src=arr[curIndex];
+
+}
+ startime();
+$(document).ready(function(){
+  $(".divlist li").hover(function(){
+    obj.src=arr[$(this).index()]
+   clearInterval(timer)
+  },function(){
+    startime();})
+});
+
+</script>
+<div class="divlist">
+  <img id=obj src="picture/主图.fw.png" style=" width:100% ;height:601px;left: 0px;position: absolute; top: 250px;z-index:-1;" >
+  <ul ><li></li>
+        <li></li>
+        <li></li>
+        <li></li></ul>
+</div>
+<div class="square" >
+<ul ><li></li>
+        <li></li>
+        <li></li>
+        <li></li></ul>
+ </div>
+ <div class="square1">
+   <ul ><li></li>
+        <li></li>
+        <li></li>
+        <li></li></ul>
+ </div>
+ <div class="square3">
+   <ul ><li><p>本周推荐</p></li>
+        <li><p>最新单品</p></li>
+        <li> <p>人气畅销</p></li>
+        <li><p>优惠专区</p></li></ul>
+ </div>
+  <div class="square4">
+   <ul ><li></li>
+        <li></li>
+        <li></li>
+        <li></li></ul>
+ </div>
+<div class="square2" style="left: 953px;position: absolute;top: 1320px;">
+ <p>¥373</p>
+ </div>
+  <div class="square2" style="left: 953px;position: absolute;top: 1565px;">
+  <p>¥373</p>
+ </div>
+ <div class="square2" style="left: 1200px;position: absolute;top: 1320px;">
+ <p>¥373</p>
+ </div>
+ <div class="square2" style="left: 1200px;position: absolute;top: 1565px;">
+ <p>¥373</p>
+ </div>
+  <div class="square2" style="left: 1447px;position: absolute;top: 1320px;">
+  <p>¥373</p>
+ </div>
+ <div class="square2" style="left: 1447px;position: absolute;top: 1565px;">
+ <p>¥373</p>
+ </div>
+ <div class="square2" style="left: 953px;position: absolute;top: 1860px;">
+ <p>¥373</p>
+ </div>
+  <div class="square2" style="left: 953px;position: absolute;top: 2105px;">
+  <p>¥373</p>
+ </div>
+ <div class="square2" style="left: 1200px;position: absolute;top: 1860px;">
+ <p>¥373</p>
+ </div>
+ <div class="square2" style="left: 1200px;position: absolute;top: 2105px;">
+ <p>¥373</p>
+ </div>
+  <div class="square2" style="left: 1447px;position: absolute;top: 1860px;">
+  <p>¥373</p>
+ </div>
+ <div class="square2" style="left: 1447px;position: absolute;top: 2105px;">
+ <p>¥373</p>
+ </div>
+  <div class="square2" style="left: 953px;position: absolute;top: 2400px;">
+  <p>¥373</p>
+ </div>
+  <div class="square2" style="left: 953px;position: absolute;top: 2645px;">
+  <p>¥373</p>
+ </div>
+ <div class="square2" style="left: 1200px;position: absolute;top: 2400px;">
+ <p>¥373</p>
+ </div>
+ <div class="square2" style="left: 1200px;position: absolute;top: 2645px;">
+ <p>¥373</p>
+ </div>
+  <div class="square2" style="left: 1447px;position: absolute;top: 2400px;">
+  <p>¥373</p>
+ </div>
+ <div class="square2" style="left: 1447px;position: absolute;top: 2645px;">
+ <p>¥373</p>
+ </div>
+  <div class="square2" style="left: 953px;position: absolute;top: 2940px;">
+  <p>¥373</p>
+ </div>
+  <div class="square2" style="left: 953px;position: absolute;top: 3185px;">
+  <p>¥373</p>
+ </div>
+ <div class="square2" style="left: 1200px;position: absolute;top: 2940px;">
+ <p>¥373</p>
+ </div>
+ <div class="square2" style="left: 1200px;position: absolute;top: 3185px;">
+ <p>¥373</p>
+ </div>
+  <div class="square2" style="left: 1447px;position: absolute;top: 2940px;">
+  <p>¥373</p>
+ </div>
+ <div class="square2" style="left: 1447px;position: absolute;top: 3185px;">
+ <p>¥373</p>
+ </div>
+
+ <div class="footer"><p style="color:#FFFFFF;left:800px;position: absolute;top: 20px;">Copyright@2003-2014,版权所有 LISP.COM</p></div>
+
+
+</body>
+</html>
